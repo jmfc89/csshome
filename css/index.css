@@ -1,0 +1,176 @@
+@keyframes giro{
+	100%{
+		transform: perspective(2000px) rotateY(-30deg) rotateZ(20deg);
+	}
+}
+
+body{
+	overflow: hidden;
+}
+
+.estructura{
+	position: relative;
+	left: 500px;
+	top: 300px;
+	animation: 10s giro infinite linear;
+	transform: perspective(2000px);
+}
+
+.estructura,
+.roof{
+	transform-style: preserve-3d;
+}
+
+.wall,
+.window,
+.door,
+.roof,
+.floor,
+.tree,
+#sun{
+	position: absolute;
+}
+
+.wall,
+.window,
+.door,
+.roof,
+.tree,
+#ventaacercle{
+	background-size: cover;
+}
+
+.wall,
+#right{
+	box-shadow: inset 10px 10px 300px 0px rgba(143,143,143,1);
+}
+
+.estructura,
+.wall,
+.tree{
+	height: 300px;
+}
+
+.wall{
+	background-image: url(../img/wall.jpg);
+	}
+
+#back{
+	transform: translateZ(-301px);
+	}
+
+
+#right{
+	transform: rotateY(-90deg);
+	transform-origin: right;
+	}
+
+.window{
+	width: 80px;
+	height: 100px;
+	top: 15px;
+}
+
+.window{
+	background-image: url(../img/window.jpg);
+}
+
+#window1{
+	left:20px;
+}
+
+#window2{
+	right:20px;
+}
+
+.door{
+	height: 120px;
+	width:80px;
+	background-image: url(../img/door.jpg);
+	bottom: 0;
+	left: 110px;
+	}
+ 
+.roof,
+#tback{
+	transform-origin: bottom;
+}
+
+.roof,
+.estructura,
+.wall{
+	width: 300px;
+}
+
+.roof{
+	height: 165px;
+	background-image: url(../img/roof.jpg);
+	bottom: 100%;
+	border-bottom: none;
+	}
+
+#tup{
+	transform: rotateX(65deg);
+	}
+
+#tback{
+	transform: translateZ(-301px) rotateX(-65deg);
+	}
+
+.floor{
+	width:11000px;
+	height: 10000px;
+	background-image: url(../img/grass.jpg);
+	z-index: -1;
+	transform: rotateX(90deg) translateZ(4699px);
+	left: -5000px;
+	}
+
+.tree{
+	width: 150px;
+	background-image: url(../img/tree.png);
+	display: block;
+	left: 110%;
+	transform: translateZ(-450px)
+	}
+
+#tree1{
+	left: 145%;
+	transform: translateZ(-460px)
+	}
+
+#tree2{
+	left: 175%;
+	transform: translateZ(-600px)
+	}
+
+#tree3{
+	left: 145%;
+	transform: translateZ(-200px)
+	}
+
+#tree4{
+	left: 220%;
+	transform: translateZ(-460px)
+	}
+
+#tree5{
+	left: 205%;
+	transform: translateZ(-40px)
+	}
+
+#tree6{
+	left: 205%;
+	transform: translateZ(-350px)
+	}
+
+#sun{
+	width: 70px;
+	height: 70px;
+	background: #faffc0;
+	bottom: 180%;
+	left: -300px;
+	border-radius: 50%;
+	transform: rotateY(25deg);
+	box-shadow: 10px 10px 300px 200px rgba(242,255,171,1);
+	}
